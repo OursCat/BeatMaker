@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: rgb(200, 230, 201);
+}
+h2 {
+	width: 40px;
+}
+.mute {
+	background-color: rgb(90, 87, 87);
+	border: none;
+	margin: 0 50px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	outline: none;
+}
+
+.mute.active {
+	background-color: gray;
+}
+.fa-volume-mute {
+	color: white;
+	pointer-events: none;
+}
+
+select {
+	width: 9rem;
+	margin-right: 10px;
+	height: 25px;
+}
+
+.mute1::before {
+	content: '';
+	background-image: url(/icons/wigflip-ds.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	top: -90px;
+	left: 50px;
+	pointer-events: none;
+}
+.pads-first {
+	position: relative;
+}
+.pads-first::before {
+	content: '';
+	background-image: url(/icons/wigflip-ds1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 160px;
+	height: 120px;
+	position: absolute;
+	top: -95px;
+	left: 150px;
+	pointer-events: none;
+}
+.play::before {
+	content: '';
+	background-image: url(/icons/wigflip-ds2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 160px;
+	height: 120px;
+	position: absolute;
+	top: -77px;
+	left: -120px;
+	pointer-events: none;
+	cursor: none;
+}
+
+.play {
+	margin: 3rem 0;
+	background-color: rgb(90, 87, 87);
+	color: white;
+	padding: 0.5rem 1rem;
+	position: relative;
+	outline: none;
+}
+input {
+	width: 15%;
+}
+.speed {
+	margin-top: 1.5rem;
+}
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.Kick,
+.Snare,
+.Hihat {
+	margin-top: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.pads {
+	display: flex;
+}
+.pad-kick {
+	width: 3rem;
+	height: 3rem;
+	background-color: blueviolet;
+	opacity: 0.5;
+	margin: 5px 0.5rem;
+	cursor: pointer;
+}
+.pad-snare {
+	width: 3rem;
+	height: 3rem;
+	background-color: rgb(230, 140, 155);
+	opacity: 0.5;
+	margin: 5px 0.5rem;
+	cursor: pointer;
+}
+.pad-hihat {
+	width: 3rem;
+	height: 3rem;
+	background-color: orangered;
+	opacity: 0.5;
+	margin: 5px 0.5rem;
+	cursor: pointer;
+}
+
+.selected {
+	opacity: 1;
+}
+
+@keyframes playSound {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
